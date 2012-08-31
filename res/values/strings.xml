@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JMZ\'s Android Test</string>
+    <string name="my_button_text">I\'m a Button</string>
+    <string name="clock_text">The Current Time Is&#8230;</string>
+    <string name="clock_button_text">Go to another screen</string>
+    <string name="text_field_hint">Insert Crap Here&#8230;</string>
+    <string name="text_field_button_text">Do Stuff</string>
+</resources>
