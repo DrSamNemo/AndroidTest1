@@ -11,6 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MyActivity extends Activity {
+
+    private Button _myButton = null;
+    private Button _clockButton = null;
+    private Button _textFieldButton = null;
+
     /**
      * Called when the activity is first created.
      */
@@ -18,19 +23,27 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alternate);
+        initializeControls();
+    }
+
+    private void initializeControls()
+    {
+        _myButton = (Button) findViewById(R.id.my_button);
+        _clockButton = (Button) findViewById(R.id.clock_button);
+        _textFieldButton = (Button) findViewById(R.id.text_field_button);
     }
 
     public void buttonClicked(View sender)
     {
-        if (sender.getId() == R.id.clock_button)
+        if (sender == _clockButton)
         {
             setContentView(R.layout.main);
         }
-        else if (sender.getId() == R.id.my_button)
+        else if (sender == _myButton)
         {
             setContentView(R.layout.alternate);
         }
-        else if (sender.getId() == R.id.text_field_button)
+        else if (sender == _textFieldButton)
         {
             String crap = ((EditText)findViewById(R.id.text_field)).getText().toString();
 
